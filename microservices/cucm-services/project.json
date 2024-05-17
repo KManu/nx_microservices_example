@@ -1,0 +1,24 @@
+{
+  "name": "cucm-services",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "microservices/cucm-services/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "cucm-services:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "cucm-services:build:development"
+        },
+        "production": {
+          "buildTarget": "cucm-services:build:production"
+        }
+      }
+    }
+  }
+}

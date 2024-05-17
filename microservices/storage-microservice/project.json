@@ -1,0 +1,24 @@
+{
+  "name": "storage-microservice",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "microservices/storage-microservice/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "storage-microservice:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "storage-microservice:build:development"
+        },
+        "production": {
+          "buildTarget": "storage-microservice:build:production"
+        }
+      }
+    }
+  }
+}

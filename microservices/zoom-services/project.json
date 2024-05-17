@@ -1,0 +1,24 @@
+{
+  "name": "zoom-services",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "microservices/zoom-services/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "zoom-services:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "zoom-services:build:development"
+        },
+        "production": {
+          "buildTarget": "zoom-services:build:production"
+        }
+      }
+    }
+  }
+}

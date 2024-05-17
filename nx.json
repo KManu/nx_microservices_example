@@ -1,0 +1,47 @@
+{
+  "installation": {
+    "version": "19.0.4"
+  },
+  "plugins": [
+    {
+      "plugin": "@nx/webpack/plugin",
+      "options": {
+        "buildTargetName": "build",
+        "serveTargetName": "serve",
+        "previewTargetName": "preview"
+      }
+    },
+    {
+      "plugin": "@nx/eslint/plugin",
+      "options": {
+        "targetName": "lint"
+      }
+    },
+    {
+      "plugin": "@nx/jest/plugin",
+      "options": {
+        "targetName": "test"
+      },
+      "exclude": [
+        "microservices/-gateway--verbose-e2e/**/*",
+        "microservices/-gateway-e2e/**/*",
+        "microservices/auth-microservice-e2e/**/*",
+        "microservices/storage-microservice-e2e/**/*",
+        "microservices/zoom-provision-microservice-e2e/**/*",
+        "microservices/cucm-provision-microservice-e2e/**/*",
+        "microservices/msol-provision-microservice-e2e/**/*",
+        "microservices/webex-provision-microservice-e2e/**/*",
+        "microservices/storage-microservice-e2e/**/*",
+        "microservices/test-e2e/**/*",
+        "microservices/-e2e/**/*",
+        "microservices/testino-e2e/**/*",
+        "microservices/auth-microservice/-e2e/**/*",
+        "microservices/storage-microservice/-e2e/**/*",
+        "microservices/zoom-services/-e2e/**/*",
+        "microservices/cucm-services/-e2e/**/*",
+        "microservices/msol-services/-e2e/**/*",
+        "microservices/frontend-gateway/-e2e/**/*"
+      ]
+    }
+  ]
+}
