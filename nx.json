@@ -43,5 +43,12 @@
         "microservices/frontend-gateway/-e2e/**/*"
       ]
     }
-  ]
+  ],
+  "targetDefaults": {
+    "@nx/js:tsc": {
+      "cache": true,
+      "dependsOn": ["^build"],
+      "inputs": ["default", "^default"]
+    }
+  }
 }

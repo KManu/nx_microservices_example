@@ -14,7 +14,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@myorg/testlib": ["libraries/testlib/src/index.ts"],
+      "@myorg/testlib2": ["libraries/testlib2/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

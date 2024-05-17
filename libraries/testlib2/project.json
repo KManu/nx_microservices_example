@@ -1,0 +1,20 @@
+{
+  "name": "testlib2",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libraries/testlib2/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libraries/testlib2",
+        "tsConfig": "libraries/testlib2/tsconfig.lib.json",
+        "packageJson": "libraries/testlib2/package.json",
+        "main": "libraries/testlib2/src/index.ts",
+        "assets": ["libraries/testlib2/*.md"]
+      }
+    }
+  }
+}
